@@ -38,6 +38,7 @@ The ML model is trained on accident data and considers the following factors:
 - **Minor**: Low severity accidents
 - **Major**: Moderate severity accidents
 - **Fatal**: High severity accidents
+  <br><br>
 **Execution Video ->**
 
   
@@ -57,26 +58,22 @@ cd vehicle-severity-ml
 
 ### Step 2: Create a Virtual Environment
 ```bash
-python -m venv venv
-source venv/bin/activate  # For Linux/macOS
-venv\Scripts\activate  # For Windows
+virtualenv mlproject
+mlproject\Scripts\
+use activate to activate the virtual environment
 ```
 
 ### Step 3: Install Dependencies
 ```bash
-pip install -r requirements.txt
+pip install django
+pip install joblib
+pip install sckit-learn
 ```
 
-### Step 4: Run Migrations
+### Step 4: Create a Django Project
 ```bash
-python manage.py makemigrations
-python manage.py migrate
-```
-
-### Step 5: Train the ML Model (If not already trained)
-Run the following script to train and save the ML model:
-```bash
-python train_model.py
+django-admin startproject vehicleSeverity
+cd vehicleServerty 
 ```
 
 ### Step 6: Run the Django Server
