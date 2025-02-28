@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body style="margin-top: 35px;">
+    <div class="container">
+    <div class="shadow-lg p-4 mb-5 bg-body-tertiary rounded">
+    <div class="home">
+        <h1 class="display-6 text-center">Accident Severity Prediction Model</h1>
+        <br>
+    </div>
+    <div class="main">
+        <div class="img">
+            <img src="/static/1.gif" alt="img">
+            <br><br>
+            <p class="text-center" style="font-family: Verdana, Geneva, Tahoma, sans-serif; ">Aronagent2025 &copy;</p>
+        </div>   
+        <div class="hero">
+            <form method="POST" action="/reqmodel/" class="p-4 bg-white shadow rounded">
+                {% csrf_token %}
+                <label>Speed (km/h):</label>
+                <input type="number" name="speed" class="form-control mb-2" required>
+    
+                <label>Weather Condition:</label>
+                <select name="weather" class="form-control mb-2">
+                    <option value="1">Clear</option>
+                    <option value="2">Rainy</option>
+                    <option value="3">Fog</option>
+                </select>
+    
+                <label>Road Type:</label>
+                <select name="road_type" class="form-control mb-2">
+                    <option value="1">Highway</option>
+                    <option value="2">City Road</option>
+                    <option value="3">Rural Road</option>
+                </select>
+    
+                <label>Time of Day:</label>
+                <select name="time_of_day" class="form-control mb-2">
+                    <option value="1">Morning</option>
+                    <option value="2">Afternoon</option>
+                    <option value="3">Night</option>
+                </select>
+    
+                <label>Vehicle Type:</label>
+                <select name="vehicle_type" class="form-control mb-2">
+                    <option value="1">Car</option>
+                    <option value="2">Motorcycle</option>
+                    <option value="3">Truck</option>
+                </select>
+    
+                <label>Traffic Density:</label>
+                <select name="traffic_density" class="form-control mb-3">
+                    <option value="1">Low</option>
+                    <option value="2">Medium</option>
+                    <option value="3">High</option>
+                </select>
+    
+                <button type="submit" class="btn-custom ">Predict Severity</button>
+            </form>
+        </div> 
+    </div>
+    </div>
+</body>
+</html>
