@@ -104,24 +104,6 @@ The model classifies accidents into three severity levels:
 | **Major** | Moderate-impact accidents | Significant injuries, hospitalization |
 | **Fatal** | High-impact accidents | Life-threatening or fatal outcomes |
 
-### Model Architecture
-
-```python
-# Example model pipeline
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.preprocessing import StandardScaler
-from sklearn.pipeline import Pipeline
-
-# Model pipeline
-model_pipeline = Pipeline([
-    ('scaler', StandardScaler()),
-    ('classifier', RandomForestClassifier(
-        n_estimators=100,
-        max_depth=10,
-        random_state=42
-    ))
-])
-```
 
 ## 🚀 Installation & Setup
 
