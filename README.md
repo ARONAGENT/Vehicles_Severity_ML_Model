@@ -217,48 +217,8 @@ python manage.py runserver
 Visit `http://127.0.0.1:8000/` to use the prediction interface.
 
 ## 📁 Project Structure
+<img width="369" height="685" alt="image" src="https://github.com/user-attachments/assets/79289e82-1799-4664-af5d-a925da99de66" />
 
-```
-vehicle-severity-ml/
-├── vehicleSeverity/
-│   ├── vehicleSeverity/
-│   │   ├── __init__.py
-│   │   ├── settings.py
-│   │   ├── urls.py
-│   │   ├── wsgi.py
-│   │   └── asgi.py
-│   ├── ml_predictor/
-│   │   ├── migrations/
-│   │   ├── __init__.py
-│   │   ├── admin.py
-│   │   ├── apps.py
-│   │   ├── models.py
-│   │   ├── views.py
-│   │   ├── urls.py
-│   │   ├── forms.py
-│   │   └── ml_utils.py
-│   ├── templates/
-│   │   ├── base.html
-│   │   ├── prediction_form.html
-│   │   ├── prediction_result.html
-│   │   └── api_docs.html
-│   ├── static/
-│   │   ├── css/
-│   │   │   └── style.css
-│   │   ├── js/
-│   │   │   └── prediction.js
-│   │   └── images/
-│   ├── models/
-│   │   ├── severity_model.pkl
-│   │   └── scaler.pkl
-│   ├── data/
-│   │   ├── training_data.csv
-│   │   └── model_metrics.json
-│   └── manage.py
-├── requirements.txt
-├── README.md
-└── .gitignore
-```
 
 ## 🔗 API Documentation
 
